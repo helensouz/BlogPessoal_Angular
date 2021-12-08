@@ -1,3 +1,7 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 #img-bg{
   background-image: url('../../assets/Group\ 3.jpg');
   min-height: 695px;
@@ -5,6 +9,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+
+.form-group label{
+  font-weight: bold;
+  line-height: 10px;
+  font-size: 14px
 }
 
 .form-group, .button{

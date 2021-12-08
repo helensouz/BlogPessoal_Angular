@@ -39,9 +39,8 @@ export class CadastrarComponent implements OnInit {
 
     //comparando as senhas, podem devem ser iguais
     if(this.usuario.senha != this.confirmarSenha){
-      alert('As senhas estão incorretas')
-    }
-    else{ // oque o usuario digitar sera enviado para o servidor
+      alert('As senhas estão incorretas!')
+    } else{ // oque o usuario digitar sera enviado para o servidor
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => { // ira transcrever ts para o json
           this.usuario = resp
           this.router.navigate(['/entrar'])

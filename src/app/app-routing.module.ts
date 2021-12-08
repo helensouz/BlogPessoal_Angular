@@ -1,3 +1,4 @@
+import { InicioComponent } from './inicio/inicio.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,9 @@ const routes: Routes = [
   },
   {
     path:'cadastrar', component: CadastrarComponent
+  },
+  {
+    path:'inicio', component: InicioComponent
   }
 
 ];

@@ -12,8 +12,8 @@
             <input class="form-control" [(ngModel)]='usuario.nome' type="text" name="nome" id="nome" placeholder="Nome completo" >
           </div>
           <div class="form-group">
-            <label for="usuario" >Usuário</label>
-            <input class="form-control" [(ngModel)]='usuario.usuario' type="text" name="usuario" id="usuario" placeholder="Digite o seu userio" >
+            <label for="usuario">E-mail</label>
+            <input class="form-control" [(ngModel)]='usuario.usuario' type="email" name="email" id="usuario" placeholder="Digite o seu usuário" >
           </div>
           <div class="form-group">
             <label for="foto" >Foto</label>
@@ -21,7 +21,7 @@
           </div>
           <div class="form-group">
             <label for="senha">Senha</label>
-            <input class="form-control" (input)='confirmSenha($event)'  type="password" name="senha" id="senha" placeholder="Digite a sua senha" >
+            <input class="form-control" (input)='confirmSenha($event)' type="password" name="senha" id="senha" placeholder="Digite a sua senha" >
           </div>
           <div class="form-group">
             <label for="confirmarSenha">Confirmar Senha</label>
