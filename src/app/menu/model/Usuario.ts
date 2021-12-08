@@ -1,4 +1,5 @@
 import { Postagem } from './Postagem';
+
 export class Usuario{
 
   public id: number
