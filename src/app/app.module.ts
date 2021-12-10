@@ -17,6 +17,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EntrarComponent,
     CadastrarComponent,
     InicioComponent,
+    TemaComponent,
   ],
 
   imports: [
