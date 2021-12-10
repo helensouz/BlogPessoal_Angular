@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { UsuarioLogin } from './../menu/model/UsuarioLogin';
 
 import { Usuario } from '../menu/model/Usuario';
@@ -19,5 +20,17 @@ export class AuthService {
 
   cadastrar(usuario: Usuario): Observable<Usuario>{ //angular ira observar o usuarioLogin, qual obj enviado
     return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario)
+  }
+
+  logado(){ //verifica se há um token preenchido no enviroments
+
+    let ok: boolean = false
+
+    if(environment.token != ''){ //se nao estiver vazio, retorna ok
+      ok = true
+    }
+
+    return ok
+
   }
 }

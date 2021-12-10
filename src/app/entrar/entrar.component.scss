@@ -1,22 +1,65 @@
 *{
   font-family: 'Poppins', sans-serif;
+ 
 }
 
+
+
 #img-bg{
-  background-image: url('../../assets/Group\ 3.jpg');
+  background-image: url('../../assets/User\ flow\ \(1\).gif');
+  background-color: #FFE6C9 ;
   min-height: 695px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
 }
+.form-control::placeholder {
+  color: #928a8a;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 
 .form-group label{
   font-weight: bold;
   line-height: 10px;
-  font-size: 14px
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  padding-top: 15px;
+
 }
 
-.form-group, .button{
-  padding-top: 10px;
+.text-log{
+  padding-bottom: 55px;
 }
+
+
+.button-btn{
+  margin: 10px;
+  width: 420px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #7F265B;
+}
+
+.button-btn:hover{
+  background-color: #B24486;
+  transition: 1s;
+}
+
+
+
+.text-cadastrar{
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+

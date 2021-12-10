@@ -1,9 +1,28 @@
+*{
+  font-family: 'Poppins', sans-serif;
+
+}
+
 #img-bg{
-  background-image: url('../../assets/Group\ 3.jpg');
+  background-image: url('../../assets/Mobile\ login.gif');
   min-height: 695px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+.form-control, select::placeholder {
+  color: #928a8a;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.form-group label{
+  font-weight: normal;
+  line-height: 10px;
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  padding-top: 15px;
 
 }
 
@@ -15,8 +34,17 @@
   float: left;
 }
 
-.button{
-  margin-top: 8px;
-  margin-right: 4px;
+.buttons{
+  float: right;
+}
 
+.button-cadastrar, .button-cancelar{
+  margin-top: 15px;
+  width: 150px;
+}
+
+.button-cancelar{
+  margin-right: 10px;
+  background-color: #7F265B;
+  border: none
 }

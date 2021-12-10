@@ -6,18 +6,18 @@
     <div class="col-md-6 mt-5 mb-5">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10">
-          <h1 class="text-center">Cadastro</h1>
+          <h1 class="text-center">Cadastre-se !</h1>
           <div class="form-group">
             <label for="nome" >Nome</label>
-            <input class="form-control" [(ngModel)]='usuario.nome' type="text" name="nome" id="nome" placeholder="Nome completo" >
+            <input class="form-control" [(ngModel)]='usuario.nome' type="text" name="nome" id="nome" placeholder="ex: Maria da Silva" >
           </div>
           <div class="form-group">
             <label for="usuario">E-mail</label>
-            <input class="form-control" [(ngModel)]='usuario.usuario' type="email" name="email" id="usuario" placeholder="Digite o seu usuário" >
+            <input class="form-control" [(ngModel)]='usuario.usuario' type="email" name="email" id="usuario" placeholder="example@email.com" >
           </div>
           <div class="form-group">
             <label for="foto" >Foto</label>
-            <input class="form-control" [(ngModel)]='usuario.foto 'type="text" name="foto" id="foto" placeholder="Link da sua foto" >
+            <input class="form-control" [(ngModel)]='usuario.foto 'type="text" name="foto" id="foto" placeholder="ex: https://imgur.com">
           </div>
           <div class="form-group">
             <label for="senha">Senha</label>
@@ -37,9 +37,9 @@
             </select>
           </div>
 
-          <div class="d-flex justify-content-center btnCadastro">
-              <button routerLink="/entrar" type="submit" class="btn btn-danger button"  >Cancelar</button>
-              <button type="submit" class="btn btn-success button" (click)='cadastrar()'>Cadastrar</button>
+          <div class="d-flex justify-content-center buttons">
+              <button routerLink="/entrar" type="submit" class="btn btn-danger button-cancelar"  >Cancelar</button>
+              <button type="submit" class="btn btn-success button-cadastrar" (click)='cadastrar()'>Cadastrar</button>
           </div>
         </div>
     </div>

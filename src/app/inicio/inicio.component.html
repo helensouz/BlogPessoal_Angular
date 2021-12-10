@@ -1,1 +1,84 @@
-<p>inicio works!</p>
+<div class="container-fluid">
+  <div class="row d-flex align-items-center" >
+    <div class="col-md-6">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+          <h1 class="fs-54">Seja Bem Vindo!</h1>
+          <h5 class="fs-18">Expresse aqui os seus pensamentos e curiosidades techs!</h5>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mt-3 mb-5">
+        <div class="col-md-6">
+          <button type="button " class="btn mr-2 text-white novo-post" style="background-color: #7F265B;"  data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova Postagem</button>
+          <a class="btn" style="border: 1px solid #7F265B;" href="#postagens">Ver Postagem</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-center">
+      <img
+        src="../../assets/Coding.gif"
+        alt=""
+        width="500px"
+        height="500px"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="container " id="postagens">
+  <nav>
+    <div class="nav nav-tabs  d-flex justify-content-center" id="nav-tab" role="tablist">
+      <button class="nav-link active text-secondary" id="nav-todasPostagens-tab" data-bs-toggle="tab" data-bs-target="#nav-todasPostagens" type="button"
+      role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens</button>
+
+      <button class="nav-link text-secondary" id="nav-minhasPostagens-tab" data-bs-toggle="tab" data-bs-target="#nav-minhasPostagens" type="button"
+      role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas postagens</button>
+
+      <button class="nav-link text-secondary" id="nav-postagemTema-tab" data-bs-toggle="tab" data-bs-target="#nav-postagemTema" type="button"
+       role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagem por tema</button>
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active  text-center" id="nav-todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">Todas as postagens..</div>
+    <div class="tab-pane fade  text-center" id="nav-minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">Minhas postagens...</div>
+    <div class="tab-pane fade  text-center"  id="nav-postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">Postagens por temas...</div>
+  </div>
+</div>
+
+<div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nova postagem</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Titulo</label>
+          <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+         <textarea  class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou  <a>Cadastre um novo:</a>  </label>
+         <select class="form-control" name="tema" id="tema">
+           <option value="">Temas</option>
+         </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" style="border: 1px solid #7F265B;" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn text-white" style="background-color: #7F265B;">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
