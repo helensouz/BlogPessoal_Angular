@@ -1,3 +1,5 @@
+import { environment } from './../../environments/environment.prod';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemaComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+    }
   }
 
 }

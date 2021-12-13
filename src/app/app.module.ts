@@ -39,6 +39,8 @@ import { TemaComponent } from './tema/tema.component';
     RouterModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    
+
 
 
 

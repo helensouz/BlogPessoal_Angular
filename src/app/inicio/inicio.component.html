@@ -48,37 +48,44 @@
   </div>
 </div>
 
-<div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<!--  ===== MODAL   ====   -->
+<div class="modal" id="novaPostagem" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nova postagem</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title">Nova postagem</h5>
+        <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <label for="titulo">Titulo</label>
-          <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+          <label for="titulo">Título</label>
+          <input type="text" class="form-control" id="titulo"
+            placeholder="Digite o título">
         </div>
 
         <div class="form-group">
           <label for="texto">Texto</label>
-         <textarea  class="form-control" name="texto" id="texto" rows="3"></textarea>
+          <textarea  class="form-control" name="texto" id="texto" rows="3"></textarea>
         </div>
 
         <div class="form-group">
-          <label for="texto">Escolha um tema ou  <a  data-dismiss="modal" routerLink="/tema">Cadastre um novo:</a>  </label>
-         <select class="form-control" name="tema" id="tema">
-           <option value="">Temas</option>
-         </select>
+        <p>Escolha um tema ou
+         <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" routerLink="/tema">cadastre um novo</button> </p>
+         <select name="tema" id="tema" class="form-control" >
+          <option value="normal" >Normal</option>
+          <option value="adm" >Administrador</option>
+
+        </select>
+
         </div>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn" style="border: 1px solid #7F265B;" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn text-white" style="background-color: #7F265B;">Publicar</button>
+
+         <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>
 </div>
-
