@@ -22,6 +22,10 @@ export class AuthService {
     return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario)
   }
 
+  getByidUsuario(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/logar/${id}`)
+  }
+
   logado(){ //verifica se há um token preenchido no enviroments
 
     let ok: boolean = false
