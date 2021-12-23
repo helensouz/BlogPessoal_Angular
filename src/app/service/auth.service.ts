@@ -23,7 +23,7 @@ export class AuthService {
   }
 
   getByidUsuario(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/logar/${id}`)
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
   }
 
   logado(){ //verifica se há um token preenchido no enviroments
