@@ -146,6 +146,8 @@
                     {{ item.data | date: "HH:mm" }}
                   </small>
                 </p>
+                <button class="text-info" [routerLink]="['/postagem-edit', item.id]">Editar</button>
+                <button class="text-danger" [routerLink]="['/postagem-delete', item.id]" >Apagar</button>
               </div>
             </div>
           </div>
