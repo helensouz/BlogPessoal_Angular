@@ -1,9 +1,11 @@
+import { AlertasComponent } from './../../alertas/alertas.component';
 import { environment } from './../../../environments/environment.prod';
 import { Route } from '@angular/compiler/src/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from './../../service/auth.service';
 import { Usuario } from './../../menu/model/Usuario';
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-usuario-edit',
@@ -23,6 +25,7 @@ export class UsuarioEditComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private route : ActivatedRoute,
+    private alertas: AlertasService,
   ) { }
 
   ngOnInit( ) {
@@ -60,7 +63,7 @@ export class UsuarioEditComponent implements OnInit {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => { // ira transcrever ts para o json
           this.usuario = resp
           this.router.navigate(['/inicio'])
-          alert('Usuario atualizado com sucesso!, por favor faça o login novamente ')
+          this.alertas.showAlertSuccess('Usuário atualizado com sucesso!, por favor faça o login novamente ')
           environment.token=''
           environment.nome=''
           environment.foto =''

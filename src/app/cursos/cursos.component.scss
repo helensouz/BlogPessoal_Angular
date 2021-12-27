@@ -1,0 +1,79 @@
+.front{
+  display: flex;
+}
+
+.course{
+  width: 250px;
+  height: 125px;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.fs-12{
+  font-family: 'Poppins', cursive;
+font-style: normal;
+font-weight: 800;
+font-size: 22px;
+line-height: 18px;
+margin-top: 40px;
+margin-left: 30px;
+color: #3F0869;
+
+}
+
+.course h4{
+  width: auto;
+height: 15px;
+
+font-family: 'Poppins', cursive;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 15px;
+/* identical to box height */
+margin: 0 auto;
+text-align: center;
+color: #3F0869;
+
+
+}
+
+
+.course p{
+width: 200px;
+height: 26px;
+font-family: 'Poppins', cursive;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 13px;
+color: #565555;
+margin: 0 auto;
+text-align: center;
+align-items: center;
+margin-top: 9px;
+}
+
+
+.btn-go{
+  width: 150px;
+height: 25px;
+color: #fff;
+font-size: 12px;
+margin: 0 auto;
+margin-top: 35px;
+border-width: 0px;
+background: #000000;
+}
+
+.btn-go:hover{
+  background-color: #3F0869;
+  transition: 1s;
+}
+
+.p-50{
+  padding-bottom: 150px;
+}

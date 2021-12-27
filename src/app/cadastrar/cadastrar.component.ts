@@ -2,6 +2,7 @@ import { AuthService } from './../service/auth.service';
 import { Usuario } from '../menu/model/Usuario';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-cadastrar',
@@ -18,7 +19,8 @@ export class CadastrarComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
 
     ) { }
 
@@ -44,7 +46,7 @@ export class CadastrarComponent implements OnInit {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => { // ira transcrever ts para o json
           this.usuario = resp
           this.router.navigate(['/entrar'])
-          alert('Usuario cadastrado com sucesso! ')
+          this.alertas.showAlertSuccess('Usuario cadastrado com sucesso! ')
     })
   }
 }

@@ -1,3 +1,4 @@
+import { CursosComponent } from './cursos/cursos.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
@@ -40,6 +41,9 @@ const routes: Routes = [
   },
   {
     path: 'usuario-edit/:id', component: UsuarioEditComponent
+  },
+  {
+    path:'cursos', component: CursosComponent
   }
 
 

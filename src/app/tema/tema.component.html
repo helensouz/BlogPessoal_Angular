@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row" style="background-color: #7F265B;">
+  <div class="row" style="background-color: #000;">
     <div class="col-md-12 text-white">
 
       <a routerLink="/inicio" class="text-white text-left">
@@ -32,18 +32,18 @@
     </div>
     <div class="row mt-3 mb-5 d-flex justify-content-center">
       <div class="col-md-6">
-        <table class="table table-dark table-hover">
+        <table class="table  table-hover" style="background-color: #000;">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Descrição do Tema</th>
-              <th scope="col" class="text-right">Modificações</th>
+              <th class="text-white" scope="col">#</th>
+              <th class="text-white" scope="col">Descrição do Tema</th>
+              <th class="text-white" scope="col" >Modificações</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor='let item of listaTemas'>
-              <th >{{item.id}}</th>
-              <td>{{item.descricao}}</td>
+              <th class="text-white" >{{item.id}}</th>
+              <td class="text-white">{{item.descricao}}</td>
               <td class="d-flex justify-content-end">
                 <button class="btn btn-info button-info text-white" [routerLink]="['/tema-edit', item.id]">Editar</button>
                 <button class="btn btn-danger button-danger text-white" [routerLink]="['/tema-delete', item.id]">Apagar</button>

@@ -1,195 +1,221 @@
-<div class="container-fluid">
-  <div class="row d-flex align-items-center">
-    <div class="col-md-6">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-6">
-          <h1 class="fs-54">Seja Bem Vindo!</h1>
-          <h5 class="fs-18">
-            Expresse aqui os seus pensamentos e curiosidades techs!
-          </h5>
-        </div>
-      </div>
+<div class="container">
 
-      <div class="row d-flex justify-content-center mt-3 mb-5">
-        <div class="col-md-6">
-          <button
-            type="button "
-            class="btn mr-2 text-white novo-post"
-            style="background-color: #7f265b"
-            data-bs-toggle="modal"
-            data-bs-target="#novaPostagem"
-          >
-            Nova Postagem
-          </button>
-          <a class="btn" style="border: 1px solid #7f265b" href="#postagens"
-            >Ver Postagem</a
-          >
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="courses-area">
+        <!-- <h2>Indicações de cursos  da semana!</h2> -->
+        <!-- <hr style="background-color: #000;" class="d-flex justify-content-center " width="118px" > -->
+      <div class="courses c1">
+       <h4>Rocketseat</h4>
+       <p>Bootcampo focado em front end para voce desenvolver projetos
+        tecnologas como css, javascript e angular.</p>
+       <button type="button" class="d-flex justify-content-center btn-go">
+         <a class="text-white" href="https://app.rocketseat.com.br" >Go!</a></button>
+     </div>
+     <div class="courses">
+      <h4>Generation Brasil</h4>
+      <p>Bootcampo focado em front end para voce desenvolver projetos
+        tecnologas como css, javascript e angular.</p>
+      <button type="button" class="d-flex justify-content-center btn-go">
+        <a class="text-white" href="https://app.rocketseat.com.br" >Go!</a></button>
     </div>
 
-    <div class="col-md-6 d-flex justify-content-center">
-      <img src="../../assets/Coding.gif" alt="" width="500px" height="500px" />
+    <div class="courses">
+      <h4>Digital innovation One</h4>
+      <p>Bootcampo focado em front end para voce desenvolver projetos
+        tecnologas como css, javascript e angular.</p>
+      <button type="button" class="d-flex justify-content-center btn-go">
+        <a class="text-white" href="https://app.rocketseat.com.br" >Go!</a></button>
     </div>
   </div>
-</div>
+  <h4>E ai, quer conferir mais indicações?<br>
+    <a>acesse esse link</a> e confira mais
+  </h4>
 
-<div class="container" id="postagens">
-  <nav>
-    <div
-      class="nav nav-tabs d-flex justify-content-center"
-      id="nav-tab"
-      role="tablist"
-    >
-      <button
-        class="nav-link active text-secondary"
-        id="nav-todasPostagens-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#nav-todasPostagens"
-        type="button"
-        role="tab"
-        aria-controls="nav-todasPostagens"
-        aria-selected="true"
-      >
-        Todas as postagens
-      </button>
-
-      <button
-        class="nav-link text-secondary"
-        id="nav-minhasPostagens-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#nav-minhasPostagens"
-        type="button"
-        role="tab"
-        aria-controls="nav-minhasPostagens"
-        aria-selected="false" (click)='findByidUsuario()'>Minhas postagens
-      </button>
-
-      <button
-        class="nav-link text-secondary"
-        id="nav-postagemTema-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#nav-postagemTema"
-        type="button"
-        role="tab"
-        aria-controls="nav-postagemTema"
-        aria-selected="false"
-      >
-        Postagem por tema
-      </button>
     </div>
-  </nav>
 
-  <div class="tab-content" id="nav-tabContent">
-    <div
-      class="tab-pane fade show active text-center"
-      id="nav-todasPostagens"
-      role="tabpanel"
-      aria-labelledby="nav-todasPostagens-tab"
-    >
-      <div class="card-colums" *ngFor="let item of listaPostagens">
-        <div class="card mb-3" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="{{ item.imagem }}"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
+
+
+    <div class="col-md-8 area-postagens">
+
+      <div class="new-post">
+        <button
+        type="button"
+
+        data-bs-toggle="modal"
+        data-bs-target="#novaPostagem">
+    Nova postagem</button>
+      </div>
+
+      <div class="container" id="postagens">
+        <nav>
+          <div
+            class="nav nav-tabs d-flex justify-content-center"
+            id="nav-tab"
+            role="tablist"
+          >
+            <button
+              class="nav-link active text-secondary"
+              id="nav-todasPostagens-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-todasPostagens"
+              type="button"
+              role="tab"
+              aria-controls="nav-todasPostagens"
+              aria-selected="true"
+            >
+              Todas as postagens
+            </button>
+
+            <button
+              class="nav-link text-secondary"
+              id="nav-minhasPostagens-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-minhasPostagens"
+              type="button"
+              role="tab"
+              aria-controls="nav-minhasPostagens"
+              aria-selected="false" (click)='findByidUsuario()'>Minhas postagens
+            </button>
+
+            <button
+              class="nav-link text-secondary"
+              id="nav-postagemTema-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-postagemTema"
+              type="button"
+              role="tab"
+              aria-controls="nav-postagemTema"
+              aria-selected="false"
+            >
+              Postagem por tema
+            </button>
+          </div>
+        </nav>
+
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active text-center"
+            id="nav-todasPostagens"
+            role="tabpanel"
+            aria-labelledby="nav-todasPostagens-tab"
+          >
+            <div class="card-colums" *ngFor="let item of listaPostagens">
+              <div class="card mb-3" >
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="{{ item.imagem }}" height="auto"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <strong>{{ item.titulo }}</strong>
+                      </h3>
+                      <p class="card-text">{{ item.texto }}</p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >date /{{ item.data | date: "dd/MM/yyyy" }} ás
+                          {{ item.data | date: "HH:mm" }}
+                        </small>
+                      </p>
+                      <small>Por: {{ item.usuario.nome }}</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h3 class="card-title">
-                  <strong>{{ item.titulo }}</strong>
-                </h3>
-                <p class="card-text">{{ item.texto }}</p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    >date /{{ item.data | date: "dd/MM/yyyy" }} ás
-                    {{ item.data | date: "HH:mm" }}
-                  </small>
-                </p>
-                <small>Por: {{ item.usuario.nome }}</small>
+
+
+          </div>
+          <div
+            class="tab-pane fade text-center"
+            id="nav-minhasPostagens"
+            role="tabpanel"
+            aria-labelledby="nav-minhasPostagens-tab"
+          >
+            <div class="card-colums" *ngFor="let item of usuario.postagem">
+              <div class="card mb-3" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="{{ item.imagem }}"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <strong>{{ item.titulo }}</strong>
+                      </h3>
+                      <p class="card-text">{{ item.texto }}</p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >date /{{ item.data | date: "dd/MM/yyyy" }} ás
+                          {{ item.data | date: "HH:mm" }}
+                        </small>
+                      </p>
+                        <small>postado por: {{ item.usuario.nome }}</small>
+
+
+                      <button class="text-info" [routerLink]="['/postagem-edit', item.id]">Editar</button>
+                      <button class="text-danger" [routerLink]="['/postagem-delete', item.id]" >Apagar</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-
-    </div>
-    <div
-      class="tab-pane fade text-center"
-      id="nav-minhasPostagens"
-      role="tabpanel"
-      aria-labelledby="nav-minhasPostagens-tab"
-    >
-      <div class="card-colums" *ngFor="let item of usuario.postagem">
-        <div class="card mb-3" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="{{ item.imagem }}"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h3 class="card-title">
-                  <strong>{{ item.titulo }}</strong>
-                </h3>
-                <p class="card-text">{{ item.texto }}</p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    >date /{{ item.data | date: "dd/MM/yyyy" }} ás
-                    {{ item.data | date: "HH:mm" }}
-                  </small>
-                </p>
-                <button class="text-info" [routerLink]="['/postagem-edit', item.id]">Editar</button>
-                <button class="text-danger" [routerLink]="['/postagem-delete', item.id]" >Apagar</button>
+          <div
+            class="tab-pane fade text-center"
+            id="nav-postagemTema"
+            role="tabpanel"
+            aria-labelledby="nav-postagemTema-tab"
+          >
+          <div class="card-colums" *ngFor="let tema of listaTemas">
+            <div class="card mb-3" style="max-width: 540px" *ngFor="let item of tema.postagem">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="{{ item.imagem }}"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h3 class="card-title">
+                      <strong>{{ item.titulo }}</strong>
+                    </h3>
+                    <p class="card-text">{{ item.texto }}</p>
+                    <p class="card-text">
+                      <small class="text-muted"
+                        >date /{{ item.data | date: "dd/MM/yyyy" }} ás
+                        {{ item.data | date: "HH:mm" }}
+                      </small>
+                      <small>postado por: {{ item.usuario.nome }}</small>
+                      <small>Tema: {{tema}}</small>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+            </div>
         </div>
       </div>
+
+
+
+
+
     </div>
 
-    <div
-      class="tab-pane fade text-center"
-      id="nav-postagemTema"
-      role="tabpanel"
-      aria-labelledby="nav-postagemTema-tab"
-    >
-    <div class="card-colums" *ngFor="let tema of listaTemas">
-      <div class="card mb-3" style="max-width: 540px" *ngFor="let item of tema.postagem">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img
-              src="{{ item.imagem }}"
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h3 class="card-title">
-                <strong>{{ item.titulo }}</strong>
-              </h3>
-              <p class="card-text">{{ item.texto }}</p>
-              <p class="card-text">
-                <small class="text-muted"
-                  >date /{{ item.data | date: "dd/MM/yyyy" }} ás
-                  {{ item.data | date: "HH:mm" }}
-                </small>
-                <small>Por: {{ item.usuario.nome }}</small>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-      </div>
   </div>
 </div>
 
@@ -281,3 +307,4 @@
     </div>
   </div>
 </div>
+

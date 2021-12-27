@@ -7,9 +7,12 @@ import { NgModule } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
 
 
+
+
 import {LocationStrategy, HashLocationStrategy} from '@angular/common'
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +26,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { CursosComponent } from './cursos/cursos.component';
 
 
 @NgModule({
@@ -39,6 +44,8 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     PostagemEditComponent,
     PostagemDeleteComponent,
     UsuarioEditComponent,
+    AlertasComponent,
+    CursosComponent,
   ],
 
   imports: [
@@ -49,10 +56,8 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     RouterModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    
-
-
-
+    BrowserModule,
+    ModalModule.forRoot(),
 
 
   ],
