@@ -157,14 +157,9 @@
                       <p class="card-text">{{ item.texto }}</p>
                       <small>Tema: {{ item.tema.descricao }}</small>
                       <br />
-                      <!-- <p class="card-text">
-                        <small class="text-muted"
-                          >date /{{ item.data | date: "dd/MM/yyyy" }} ás
-                          {{ item.data | date: "HH:mm" }}
-
-                        </small>
-                      </p> -->
-                      <small>postado por: {{ item.usuario.nome }}</small>
+                       <p class="card-text">
+                        <small>postado por: {{ item.usuario.nome }}</small>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -196,14 +191,11 @@
                       <small>Tema: {{ item.tema.descricao }}</small>
                       <br />
 
-                      <!-- <p class="card-text">
-                        <small class="text-muted"
-                          >date /{{ item.data | date: 'dd/MM/yyyy' }} ás
-                          {{ item.data | date: 'HH:mm' }}
-                        </small>
+                      <p class="card-text">
+                        <small>postado por: {{ item.usuario.nome }}</small>
+                      </p>
 
 
-                      </p> -->
 
                       <a
                         class="text-info"
@@ -259,10 +251,9 @@
                       </h3>
                       <p class="card-text">{{ item.texto }}</p>
                       <br />
-                      <!-- <p class="card-text"><small class="text-muted">
-                        {{item.data | date: 'dd/mm/yyyy'}} às {{item.data | date: 'HH:mm'}}
-                      </small></p> -->
-                      <small>postado por: {{ item.usuario.nome }}</small>
+                      <p class="card-text">
+                        <small>postado por: {{ item.usuario.nome }}</small>
+                      </p>
                     </div>
                   </div>
                 </div>
