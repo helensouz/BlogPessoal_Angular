@@ -32,6 +32,7 @@
                 </small>
               </p>
               <small>Por: {{ postagem.usuario.nome }}</small>
+
             </div>
           </div>
         </div>
@@ -39,8 +40,8 @@
 
       <div class="row">
         <div class="col-md-12">
-          <button routerLink="/inicio">Não</button>
-          <button (click)="apagar()">Sim</button>
+          <button class="btn btn-danger" routerLink="/inicio">Não</button>
+          <button class="btn btn-success" (click)="apagar()">Sim</button>
         </div>
       </div>
 

@@ -2,9 +2,11 @@
 
   <div class="row">
     <div class="col-md-4">
+
       <div class="courses-area">
-        <!-- <h2>Indicações de cursos  da semana!</h2> -->
-        <!-- <hr style="background-color: #000;" class="d-flex justify-content-center " width="118px" > -->
+        <h4>E ai, quer conferir mais indicações?<br>
+          <a routerLink="/cursos">acesse esse link</a> e confira mais
+        </h4>
       <div class="courses c1">
        <h4>Rocketseat</h4>
        <p>Bootcampo focado em front end para voce desenvolver projetos
@@ -28,9 +30,7 @@
         <a class="text-white" href="https://app.rocketseat.com.br" >Go!</a></button>
     </div>
   </div>
-  <h4>E ai, quer conferir mais indicações?<br>
-    <a>acesse esse link</a> e confira mais
-  </h4>
+
 
     </div>
 
@@ -100,14 +100,25 @@
             role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab"
           >
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+              <div class="form-group">
+                <input  [(ngModel)]='tituloPost' (keyup)="findByTituloPostagem()" class="form-control  card-t" id="titulo" type="text" placeholder="digite um titulo para pesquisar">
+
+              </div>
+            </div>
+          </div>
+
             <div class="card-colums" *ngFor="let item of listaPostagens">
-              <div class="card mb-3" >
+              <div class="card card-t mb-3" >
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="{{ item.imagem }}" height="auto"
-                      class="img-fluid rounded-start"
+
+                      src="{{ item.imagem }}"
+                      class="img-fluid "
                       alt="..."
+                      id="img-card"
                     />
                   </div>
                   <div class="col-md-8">
@@ -116,13 +127,16 @@
                         <strong>{{ item.titulo }}</strong>
                       </h3>
                       <p class="card-text">{{ item.texto }}</p>
+                      <small>Tema: {{item.tema.descricao}}</small>
+
                       <p class="card-text">
                         <small class="text-muted"
                           >date /{{ item.data | date: "dd/MM/yyyy" }} ás
                           {{ item.data | date: "HH:mm" }}
+
                         </small>
                       </p>
-                      <small>Por: {{ item.usuario.nome }}</small>
+                      <small>postado por: {{ item.usuario.nome }}</small>
                     </div>
                   </div>
                 </div>
@@ -138,7 +152,7 @@
             aria-labelledby="nav-minhasPostagens-tab"
           >
             <div class="card-colums" *ngFor="let item of usuario.postagem">
-              <div class="card mb-3" style="max-width: 540px">
+              <div class="card mb-3  card-t" >
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
@@ -153,17 +167,21 @@
                         <strong>{{ item.titulo }}</strong>
                       </h3>
                       <p class="card-text">{{ item.texto }}</p>
+                      <small>Tema: {{item.tema.descricao}}</small>
+
+
+
                       <p class="card-text">
                         <small class="text-muted"
-                          >date /{{ item.data | date: "dd/MM/yyyy" }} ás
-                          {{ item.data | date: "HH:mm" }}
+                          >date /{{ item.data | date: 'dd/MM/yyyy' }} ás
+                          {{ item.data | date: 'HH:mm' }}
                         </small>
+
+
                       </p>
-                        <small>postado por: {{ item.usuario.nome }}</small>
 
-
-                      <button class="text-info" [routerLink]="['/postagem-edit', item.id]">Editar</button>
-                      <button class="text-danger" [routerLink]="['/postagem-delete', item.id]" >Apagar</button>
+                      <a class="text-info" [routerLink]="['/postagem-edit', item.id]">Editar</a>
+                      <a class="text-danger" [routerLink]="['/postagem-delete', item.id]" >Apagar</a>
                     </div>
                   </div>
                 </div>
@@ -177,8 +195,19 @@
             role="tabpanel"
             aria-labelledby="nav-postagemTema-tab"
           >
+
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+              <div class="form-group">
+                <input  [(ngModel)]='nomeTema' (keyup)="findByNomeTema()" class="form-control  card-t" id="titulo" type="text" placeholder="digite um tema para pesquisar">
+
+              </div>
+            </div>
+          </div>
+
+
           <div class="card-colums" *ngFor="let tema of listaTemas">
-            <div class="card mb-3" style="max-width: 540px" *ngFor="let item of tema.postagem">
+            <div class="card mb-3 card-t" *ngFor="let item of tema.postagem">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img
@@ -193,14 +222,12 @@
                       <strong>{{ item.titulo }}</strong>
                     </h3>
                     <p class="card-text">{{ item.texto }}</p>
-                    <p class="card-text">
-                      <small class="text-muted"
-                        >date /{{ item.data | date: "dd/MM/yyyy" }} ás
-                        {{ item.data | date: "HH:mm" }}
-                      </small>
+
+                      <p class="card-text"><small class="text-muted">
+                        {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+                      </small></p>
                       <small>postado por: {{ item.usuario.nome }}</small>
-                      <small>Tema: {{tema}}</small>
-                    </p>
+
                   </div>
                 </div>
               </div>

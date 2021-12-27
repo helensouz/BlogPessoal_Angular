@@ -42,14 +42,8 @@
 
       <div class="form-group">
         <p>
-          Escolha um tema ou
-          <button
-            class="btn btn-primary btn-sm"
-            data-bs-dismiss="modal"
-            routerLink="/tema"
-          >
-            cadastre um novo
-          </button>
+          Editar tema
+
         </p>
         <select
           name="tema"
@@ -65,8 +59,8 @@
       </div>
 
       <div class="d-flex justify-content-center">
-        <button routerLink="/inicio">Cancelar</button>
-        <button (click)='atualizar()'>Atualizar</button>
+        <button class="btn btn-danger" routerLink="/inicio">Cancelar</button>
+        <button class="btn btn-success" (click)='atualizar()'>Atualizar</button>
       </div>
 
 

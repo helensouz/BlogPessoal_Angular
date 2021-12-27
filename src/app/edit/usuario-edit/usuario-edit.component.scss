@@ -1,7 +1,32 @@
-.form-control{
-  width: 372px;
-height: 33px;
+.form-group{
+  width: 400px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  color: #000;
+  border-radius: 0px;
+}
+
+h1{
+  padding-top: 30px
+}
+
+input-placeholder{
+  color: #000;
+  font-weight: normal;
+  font-size: 14px;
+}
 
 
-background: #FFFFFF;
+label, h1{
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ct{
+  margin-bottom: 100px;
+}
+
+button{
+  margin-right: 10px;
+  margin-bottom: 35px;
 }

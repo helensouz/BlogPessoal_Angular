@@ -1,3 +1,4 @@
+import { AlertasService } from 'src/app/service/alertas.service';
 import { TemaService } from './../service/tema.service';
 import { Tema } from './../menu/model/Tema';
 import { environment } from './../../environments/environment.prod';
@@ -17,14 +18,15 @@ export class TemaComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alertas: AlertasService
      ) { }
 
 
      cadastrar(){
        this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
         this.tema = resp
-        alert('Tema cadastrado com sucesso! Tudo certo!')
+        this.alertas.showAlertSuccess('Tema cadastrado com sucesso! Tudo certo!')
         this.findAllTemas()
         this.tema = new Tema()
 
