@@ -5,39 +5,56 @@ import { environment } from './../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostagemService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token),
+  };
 
-
-  token ={
-    headers: new HttpHeaders().set('Authorization', environment.token)
+  getAllPostagem(): Observable<Postagem[]> {
+    return this.http.get<Postagem[]>(
+      'https://blogpessoalhelen.herokuapp.com/postagem',
+      this.token
+    );
   }
 
-  getAllPostagem(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('http://localhost:8080/postagem', this.token)
+  getByidPostagem(id: number): Observable<Postagem> {
+    return this.http.get<Postagem>(
+      `https://blogpessoalhelen.herokuapp.com/postagem/${id}`,
+      this.token
+    );
   }
 
-  getByidPostagem(id: number):Observable<Postagem>{
-    return this.http.get<Postagem>(`http://localhost:8080/postagem/${id}`, this.token)
+  postPostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.post<Postagem>(
+      'https://blogpessoalhelen.herokuapp.com/postagem',
+      postagem,
+      this.token
+    );
   }
 
-  postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('http://localhost:8080/postagem', postagem, this.token)
-
+  putPostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.put<Postagem>(
+      'https://blogpessoalhelen.herokuapp.com/postagem',
+      postagem,
+      this.token
+    );
   }
 
-  putPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.put<Postagem>('http://localhost:8080/postagem', postagem, this.token)
+  deletePostagem(id: number) {
+    return this.http.delete(
+      `https://blogpessoalhelen.herokuapp.com/postagem/${id}`,
+      this.token
+    );
   }
 
-  deletePostagem(id: number){
-    return this.http.delete(`http://localhost:8080/postagem/${id}`, this.token)
-  }
-
-  getByTituloPostagem(titulo: string): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>(`http://localhost:8080/postagem/titulo/${titulo}`, this.token)
+  getByTituloPostagem(titulo: string): Observable<Postagem[]> {
+    return this.http.get<Postagem[]>(
+      `https://blogpessoalhelen.herokuapp.com/postagem/titulo/${titulo}`,
+      this.token
+    );
   }
 }
