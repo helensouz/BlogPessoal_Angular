@@ -1,48 +1,70 @@
 <div class="container">
-
   <div class="row">
     <div class="col-md-4">
-
       <div class="courses-area">
-        <h4>E ai, quer conferir mais indicações?<br>
+        <h4>
+          E ai, quer conferir mais indicações?<br />
           <a routerLink="/cursos">acesse esse link</a> e confira mais
         </h4>
-      <div class="courses c1">
-       <h4>Rocketseat</h4>
-       <p>Bootcampo focado em front end para voce desenvolver projetos
-        tecnologas como css, javascript e angular.</p>
-       <button type="button" class="d-flex justify-content-center btn-go">
-         <a class="text-white" target="_blank" href="https://app.rocketseat.com.br" >Go!</a></button>
-     </div>
-     <div class="courses">
-      <h4>Generation Brasil</h4>
-      <p>A Generation Brasil treina você nas habilidades mais relevantes para os empregadores, conectando você com o seu futuro. Saiba mais sobre nossos programas.</p>
-      <button type="button" class="d-flex justify-content-center btn-go">
-        <a class="text-white" target="_blank" href="https://brazil.generation.org" >Go!</a></button>
+        <div class="courses c1">
+          <h4>Rocketseat</h4>
+          <p>
+            Bootcampo focado em front end para voce desenvolver projetos
+            tecnologas como css, javascript e angular.
+          </p>
+          <button type="button" class="d-flex justify-content-center btn-go">
+            <a
+              class="text-white"
+              target="_blank"
+              href="https://app.rocketseat.com.br"
+              >Go!</a
+            >
+          </button>
+        </div>
+        <div class="courses">
+          <h4>Generation Brasil</h4>
+          <p>
+            A Generation Brasil treina você nas habilidades mais relevantes para
+            os empregadores, conectando você com o seu futuro. Saiba mais sobre
+            nossos programas.
+          </p>
+          <button type="button" class="d-flex justify-content-center btn-go">
+            <a
+              class="text-white"
+              target="_blank"
+              href="https://brazil.generation.org"
+              >Go!</a
+            >
+          </button>
+        </div>
+
+        <div class="courses">
+          <h4>Digital innovation One</h4>
+          <p>
+            +600 mil devs já estão programando o futuro e desenvolvendo sua
+            carreiras com a DIO. Vem com a gente.
+          </p>
+          <button type="button" class="d-flex justify-content-center btn-go">
+            <a
+              class="text-white"
+              target="_blank"
+              href="https://www.dio.me/sign-in"
+              >Go!</a
+            >
+          </button>
+        </div>
+      </div>
     </div>
-
-    <div class="courses">
-      <h4>Digital innovation One</h4>
-      <p>+600 mil devs já estão programando o futuro e desenvolvendo sua carreiras com a DIO. Vem com a gente.</p>
-      <button type="button" class="d-flex justify-content-center btn-go">
-        <a class="text-white" target="_blank" href="https://www.dio.me/sign-in" >Go!</a></button>
-    </div>
-  </div>
-
-
-    </div>
-
-
 
     <div class="col-md-8 area-postagens">
-
       <div class="new-post">
         <button
-        type="button"
-
-        data-bs-toggle="modal"
-        data-bs-target="#novaPostagem">
-    Nova postagem</button>
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#novaPostagem"
+        >
+          Nova postagem
+        </button>
       </div>
 
       <div class="container" id="postagens">
@@ -73,7 +95,10 @@
               type="button"
               role="tab"
               aria-controls="nav-minhasPostagens"
-              aria-selected="false" (click)='findByidUsuario()'>Minhas postagens
+              aria-selected="false"
+              (click)="findByidUsuario()"
+            >
+              Minhas postagens
             </button>
 
             <button
@@ -98,23 +123,28 @@
             role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab"
           >
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-5">
-              <div class="form-group">
-                <input  [(ngModel)]='tituloPost' (keyup)="findByTituloPostagem()" class="form-control  card-t" id="titulo" type="text" placeholder="digite um titulo para pesquisar">
-
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="tituloPost"
+                    (keyup)="findByTituloPostagem()"
+                    class="form-control card-t"
+                    id="titulo"
+                    type="text"
+                    placeholder="digite um titulo para pesquisar"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
             <div class="card-colums" *ngFor="let item of listaPostagens">
-              <div class="card card-t mb-3" >
+              <div class="card card-t mb-3">
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-
                       src="{{ item.imagem }}"
-                      class="img-fluid "
+                      class="img-fluid"
                       alt="..."
                       id="img-card"
                     />
@@ -125,8 +155,8 @@
                         <strong>{{ item.titulo }}</strong>
                       </h3>
                       <p class="card-text">{{ item.texto }}</p>
-                      <small>Tema: {{item.tema.descricao}}</small>
-
+                      <small>Tema: {{ item.tema.descricao }}</small>
+                      <br />
                       <!-- <p class="card-text">
                         <small class="text-muted"
                           >date /{{ item.data | date: "dd/MM/yyyy" }} ás
@@ -140,8 +170,6 @@
                 </div>
               </div>
             </div>
-
-
           </div>
           <div
             class="tab-pane fade text-center"
@@ -150,7 +178,7 @@
             aria-labelledby="nav-minhasPostagens-tab"
           >
             <div class="card-colums" *ngFor="let item of usuario.postagem">
-              <div class="card mb-3  card-t" >
+              <div class="card mb-3 card-t">
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
@@ -165,9 +193,8 @@
                         <strong>{{ item.titulo }}</strong>
                       </h3>
                       <p class="card-text">{{ item.texto }}</p>
-                      <small>Tema: {{item.tema.descricao}}</small>
-
-
+                      <small>Tema: {{ item.tema.descricao }}</small>
+                      <br />
 
                       <!-- <p class="card-text">
                         <small class="text-muted"
@@ -178,8 +205,16 @@
 
                       </p> -->
 
-                      <a class="text-info" [routerLink]="['/postagem-edit', item.id]">Editar</a>
-                      <a class="text-danger" [routerLink]="['/postagem-delete', item.id]" >Apagar</a>
+                      <a
+                        class="text-info"
+                        [routerLink]="['/postagem-edit', item.id]"
+                        >Editar</a
+                      >
+                      <a
+                        class="text-danger"
+                        [routerLink]="['/postagem-delete', item.id]"
+                        >Apagar</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -193,54 +228,50 @@
             role="tabpanel"
             aria-labelledby="nav-postagemTema-tab"
           >
-
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-5">
-              <div class="form-group">
-                <input  [(ngModel)]='nomeTema' (keyup)="findByNomeTema()" class="form-control  card-t" id="titulo" type="text" placeholder="digite um tema para pesquisar">
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="card-colums" *ngFor="let tema of listaTemas">
-            <div class="card mb-3 card-t" *ngFor="let item of tema.postagem">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                  src="{{ item.imagem }}"
-                  class="img-fluid rounded-start"
-
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="nomeTema"
+                    (keyup)="findByNomeTema()"
+                    class="form-control card-t"
+                    id="titulo"
+                    type="text"
+                    placeholder="digite um tema para pesquisar"
                   />
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h3 class="card-title">
-                      <strong>{{ item.titulo }}</strong>
-                    </h3>
-                    <p class="card-text">{{ item.texto }}</p>
+              </div>
+            </div>
 
+            <div class="card-colums" *ngFor="let tema of listaTemas">
+              <div class="card mb-3 card-t" *ngFor="let item of tema.postagem">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="{{ item.imagem }}"
+                      class="img-fluid rounded-start"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        <strong>{{ item.titulo }}</strong>
+                      </h3>
+                      <p class="card-text">{{ item.texto }}</p>
+                      <br />
                       <!-- <p class="card-text"><small class="text-muted">
                         {{item.data | date: 'dd/mm/yyyy'}} às {{item.data | date: 'HH:mm'}}
                       </small></p> -->
                       <small>postado por: {{ item.usuario.nome }}</small>
-
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-            </div>
         </div>
       </div>
-
-
-
-
-
     </div>
-
   </div>
 </div>
 
@@ -332,4 +363,3 @@
     </div>
   </div>
 </div>
-
